@@ -1,8 +1,8 @@
 package software.ulpgc.moneycalculator;
 
-public record Currency(String code, String name) {
+public record Money(long amount, Currency currency) {
     @Override
     public String toString() {
-        return code + "-" + name;
+        return amount + " " + currency;
     }
 }
